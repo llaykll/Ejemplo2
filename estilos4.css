@@ -1,0 +1,85 @@
+*{
+ margin: 0px;
+ padding: 0px;
+}
+
+body {
+	display: flex;
+	background-color: brown;
+        flex-direction: column;
+     }
+
+.Encabezado {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: red;
+}
+
+.Encabezado ul {
+       display: flex;
+       flex-direction: row-reverse;
+       list-style: none;
+}
+
+.Encabezado li { 
+       display: flex;
+       width: 10em;
+}
+main { display: flex;
+       flex-direction: column; 
+       margin: 20px;
+       padding: 20px;
+ }
+
+.titulo h1 {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       animation: vuelta 5s infinite linear;
+}
+
+
+@keyframes vuelta {
+       from { transform: rotateY(0deg);}
+       to { transform: rotateY(360deg);}
+}
+
+ 
+.Escena { display: flex;
+         justify-content: center;
+         align-items: center;
+        margin: 100px;
+}
+
+.Cubo { 
+     width: 200px;
+     height: 200px;
+     position: relative;
+     transform-style: preserve-3d;
+     animation: vuelta3d 10s infinite linear; 
+}
+
+.Cubo div {
+     position: absolute;
+     width: 200px;
+     height: 200px;
+     background-size: cover;
+     background-position: center;
+}
+
+.frontal { transform: rotateY(0deg) translateZ(100px); } 
+.derecho { transform: rotateY(180deg) translateZ(100px); } 
+.izquierdo { transform: rotateY(-90deg) translateZ(100px); } 
+.inferior { transform: rotateY(90deg) translateZ(100px); } 
+.interior { transform: rotateX(90deg) translateZ(100px); } 
+.tracero { transform: rotateX(-90deg) translateZ(100px); } 
+
+
+@keyframes vuelta3d {
+       from { transform: rotateX(0deg) rotateY(0deg);}
+       to { transform: rotateX(360deg) rotateY(360deg);}
+}
+
+
+	
